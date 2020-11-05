@@ -1,0 +1,14 @@
+.orange-btn {
+  background-color: map_get($theme-colors, primary-orange);
+  padding: 8px 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  margin: 20px;
+  font-weight: 600;
+
+  i {
+    margin-left: 20px;
+  }
+}

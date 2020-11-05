@@ -1,0 +1,32 @@
+@mixin columnTextSection {
+  .column-text-section {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 0 20px;
+
+    p {
+      font-size: 16px;
+
+      &.column-text-eyebrow {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
+
+    h2 {
+      font-size: 40px;
+      font-weight: 600;
+
+      @media screen and (max-width: 768px) {
+        font-size: 38px;
+      }
+    }
+
+    a::after {
+      content: " \2192";
+    }
+  }
+}

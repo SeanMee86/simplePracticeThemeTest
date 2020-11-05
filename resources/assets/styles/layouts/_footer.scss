@@ -1,0 +1,43 @@
+footer.content-info {
+  padding: 100px 0;
+
+  @media screen and (max-width: 575px) {
+    padding: 100px 0 0;
+  }
+
+  .footer-bottom {
+    margin-top: 80px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: map_get($theme-colors, primary-blue);
+    border-radius: 4px;
+    padding: 80px 20px;
+    color: #fff;
+
+    h2 {
+      font-size: 40px;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      padding-inline-start: 0;
+
+      li {
+        margin: 10px;
+
+        &::before {
+          content: "✓";
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

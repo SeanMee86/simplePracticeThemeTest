@@ -1,0 +1,45 @@
+@import "../common/variables";
+@import "../common/mixins/column-text-section";
+@import "../common/mixins/classes-repeater";
+@import "../common/mixins/webinar-repeater";
+
+.wrap.container-fluid {
+  padding: 0;
+
+  #section-1 {
+    .wp-block-image {
+      margin-bottom: 0;
+    }
+
+    .wp-block-columns {
+      .wp-block-column {
+        .wp-block-image {
+          figure img {
+            height: auto;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          flex-basis: 100% !important;
+
+          .wp-block-image {
+            figure {
+              &.alignleft,
+              &.alignright {
+                float: none;
+                display: flex;
+                margin: 50px 0;
+                justify-content: center;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include columnTextSection;
+  }
+
+  @include classesRepeater;
+  @include webinarRepeater;
+}

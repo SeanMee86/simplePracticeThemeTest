@@ -1,0 +1,39 @@
+@mixin webinarBanner {
+  .webinar-banner {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    height: 5px;
+
+    div:nth-child(1) {
+      background-color: mediumpurple;
+    }
+
+    div:nth-child(2) {
+      background-color: dodgerblue;
+    }
+
+    div:nth-child(3) {
+      background-color: seagreen;
+    }
+
+    div:nth-child(4) {
+      background-color: yellow;
+    }
+
+    div:nth-child(5) {
+      background-color: orange;
+    }
+
+    div:nth-child(6) {
+      background-color: orangered;
+    }
+
+    div:nth-child(7) {
+      background-color: sandybrown;
+    }
+
+    div:nth-child(8) {
+      background-color: black;
+    }
+  }
+}

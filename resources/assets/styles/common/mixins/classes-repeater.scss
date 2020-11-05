@@ -1,0 +1,55 @@
+@mixin classesRepeater {
+  .classes-repeater-container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+
+    ul.list-group {
+      flex-direction: row;
+      min-width: min-content;
+      position: relative;
+      left: 0;
+      transition: left 0.4s ease-out;
+
+      li {
+        width: 240px;
+        height: 240px;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+        padding: 10px;
+        margin-right: 40px;
+        color: #fff;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .arrow-repeater-container {
+    position: relative;
+    margin-top: 20px;
+
+    #repeater-left {
+      position: absolute;
+      left: 0;
+      display: none;
+    }
+
+    #repeater-right {
+      position: absolute;
+      right: 0;
+    }
+
+    .repeater-arrow {
+      border: none;
+      background: transparent;
+      color: map_get($theme-colors, primary-blue);
+      font-size: 22px;
+      display: flex;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

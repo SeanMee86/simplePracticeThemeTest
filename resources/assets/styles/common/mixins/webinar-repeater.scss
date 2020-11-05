@@ -1,0 +1,117 @@
+@import "webinar-banner";
+
+@mixin webinarRepeater {
+  #webinar-grid {
+    background-color: map_get($theme-colors, light-blue-background);
+    padding: 100px 20px;
+
+    > h2 {
+      font-size: 32px;
+      text-align: center;
+    }
+
+    > p {
+      text-align: center;
+    }
+
+    .webinar-repeater-container {
+      display: grid;
+      justify-items: center;
+      grid-gap: 80px;
+      margin: 50px 0;
+
+      @media screen and (min-width: 1201px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media screen and (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media screen and (max-width: 767px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .webinar {
+        border: 1px solid #f2f2f2;
+        box-sizing: border-box;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        width: 315px;
+        position: relative;
+
+        @include webinarBanner;
+
+        .webinar-top {
+          display: flex;
+          background-color: rgba(186, 217, 249, 0.6);
+          min-height: 191px;
+
+          .webinar-top-left {
+            width: 60%;
+            padding: 15px 10px 5px;
+          }
+
+          .webinar-top-right {
+            width: 40%;
+            padding: 15px 10px 5px;
+            position: relative;
+
+            img {
+              width: 50%;
+              border-radius: 50%;
+              border: 1px solid #fff;
+              position: absolute;
+
+              &:nth-child(2) {
+                transform: translate(70%, 90%);
+              }
+
+              &:last-child {
+                transform: translateY(140%);
+              }
+            }
+          }
+
+          .eyebrow {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: map_get($theme-colors, primary-blue);
+          }
+
+          h2 {
+            font-size: 16px;
+          }
+
+          p {
+            font-size: 12px;
+          }
+        }
+
+        .webinar-bottom {
+          padding: 20px 10px 55px;
+
+          .eyebrow {
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: map_get($theme-colors, primary-blue);
+          }
+
+          h2 {
+            font-size: 20px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+
+          a {
+            position: absolute;
+            bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
